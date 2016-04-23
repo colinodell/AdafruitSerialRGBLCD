@@ -1,5 +1,5 @@
 # adafruit-serial-rgb-lcd
-Firmware library for Adafruit's USB + Serial Backpack Kit with 16x2 RGB LCD
+Firmware library for [Adafruit's USB + Serial Backpack Kit with 16x2 RGB LCD](https://www.adafruit.com/products/782).
 
 This library only supports the TTL serial connection.
 
