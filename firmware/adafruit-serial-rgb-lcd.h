@@ -14,8 +14,8 @@ class SerialRGBLCD : public Print
     void begin(uint16_t baud);
     void displayOn();
     void displayOff();
-    void setBrightness(uint8_t brightness);
-    void setContrast(uint8_t contrast);
+    void setBrightness(uint8_t brightness, bool saveToEEPROM = false);
+    void setContrast(uint8_t contrast, bool saveToEEPROM = false);
     void setAutoscroll(bool autoscroll);
     void clear();
     void changeStartupSplash(char *text);
