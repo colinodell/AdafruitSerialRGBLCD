@@ -1,0 +1,20 @@
+{
+  "name": "adafruit-serial-rgb-lcd",
+  "version": "0.0.2",
+  "description": "Firmware library for Adafruit's USB + Serial Backpack Kit with 16x2 RGB LCD",
+  "keywords": "Adafruit, LCD, RGB, backpack, serial, USB",  
+  "license": "MIT",
+  "include": "firmware",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colinodell/adafruit-serial-rgb-lcd.git"
+  },
+  "authors": [
+    {
+      "name": "Colin O'Dell",
+      "email": "colinodell@gmail.com",
+      "url": "https://www.colinodell.com",
+      "maintainer": true
+    }
+  ]
+}
