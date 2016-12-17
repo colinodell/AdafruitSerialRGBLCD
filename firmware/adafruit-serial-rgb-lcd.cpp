@@ -10,7 +10,7 @@ void SerialRGBLCD::begin(uint16_t baud)
   #if defined (STM32F2XX)
     Serial1.begin(baud);
   #else
-    #error "This platform is not yet supported."
+    Serial.begin(baud);
   #endif
 }
 
@@ -149,7 +149,7 @@ size_t SerialRGBLCD::write(uint8_t character)
   #if defined (STM32F2XX)
     Serial1.write(character);
   #else
-    #error "This platform is not yet supported."
+    Serial.write(character);
   #endif
 }
 
