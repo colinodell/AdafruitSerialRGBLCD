@@ -5,8 +5,6 @@
 
 #if defined (STM32F2XX)
   #include "application.h"
-#else
-  #error "This platform is not yet supported."
 #endif
 
 class SerialRGBLCD : public Print
