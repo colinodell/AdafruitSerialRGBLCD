@@ -8,6 +8,9 @@
     "type": "git",
     "url": "https://github.com/colinodell/adafruit-serial-rgb-lcd.git"
   },
+  "export": {
+    "include": "firmware"
+  },
   "authors": [
     {
       "name": "Colin O'Dell",
