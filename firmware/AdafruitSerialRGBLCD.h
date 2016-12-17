@@ -5,6 +5,8 @@
 
 #if defined (STM32F2XX)
   #include "application.h"
+#else
+  #include <Arduino.h>
 #endif
 
 class SerialRGBLCD : public Print

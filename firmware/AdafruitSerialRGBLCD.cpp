@@ -30,7 +30,7 @@ void SerialRGBLCD::displayOff()
   delay(0.3);
 }
 
-void SerialRGBLCD::setBrightness(uint8_t brightness, bool saveToEEPROM = false)
+void SerialRGBLCD::setBrightness(uint8_t brightness, bool saveToEEPROM)
 {
   write(0xFE);
   if (saveToEEPROM) {
@@ -41,7 +41,7 @@ void SerialRGBLCD::setBrightness(uint8_t brightness, bool saveToEEPROM = false)
   write(brightness);
 }
 
-void SerialRGBLCD::setContrast(uint8_t contrast, bool saveToEEPROM = false)
+void SerialRGBLCD::setContrast(uint8_t contrast, bool saveToEEPROM)
 {
   write(0xFE);
   if (saveToEEPROM) {
