@@ -1,25 +1,21 @@
-# adafruit-serial-rgb-lcd
+# AdafruitSerialRGBLCD
 Firmware library for [Adafruit's USB + Serial Backpack Kit with 16x2 RGB LCD](https://www.adafruit.com/products/782).
 
 This library only supports the TTL serial connection.
 
 ## Supported Boards
 
-Currently this library only supports the Particle Photon.  It should be possible to support other boards (including Arduinos) by modifying the constructor and `write()` methods to use `Serial` instead of `Serial1`, though this is currently untested.
+This library has been tested with the Particle Photon and Adafruit Huzzah ESP8266.  Other Arduino boards should work too (but may require minor changes to the library).
 
-### Particle Photon
+### Wiring
 
 Wire the board as follows:
 
- - Red wire to +5V (VIN)
+ - Red wire to +5V (VIN, VBUS, etc.)
  - Black wire to ground (GND)
  - White wire to TX
 
-Even though the Photon operates at 3.3v logic, powering it via USB does provide just under 5V output on the VIN pin, which is sufficient for powering the LCD backpack.  Furthermore, because data is only being transmitted from the Photon, we don't have to worry about level shifting.
-
-### Arduino
-
-As mentioned above, this library should work on Arduinos with minimal changes.  Please submit a PR if you get it working!
+Even though the Particle Photon and Adafruit Huzzah operate at 3.3v logic, powering it via USB does provide ~5V output on one of the pins, which is sufficient for powering the LCD backpack.  Furthermore, because data is only being transmitted from the device (and not received from it to the board), we don't have to worry about level shifting.
 
 ## Documentation
 
@@ -28,7 +24,7 @@ This documentation is adapted from https://learn.adafruit.com/usb-plus-serial-ba
 ### Initialization
 
 ```
-SerialRGBLCD lcd;
+AdafruitSerialRGBLCD lcd;
 
 void setup()
 {
@@ -50,13 +46,13 @@ Turns the display on.
 
 Turns the display off.
 
-#### `void setBrightness(uint8_t brightness)`
+#### `void setBrightness(uint8_t brightness, bool saveToEEPROM = false)`
 
-Sets the brightness between `0` (dimmest) and `255` (brightest).  The value will be persisted to EEPROM.
+Sets the brightness between `0` (dimmest) and `255` (brightest). You can change whether this setting should persist to EEPROM.
 
-#### `void setContrast(uint8_t contrast)`
+#### `void setContrast(uint8_t contrast, bool saveToEEPROM = false)`
 
-Sets the contrast between `0` and `255`.  The value will be persisted to EEPROM.
+Sets the contrast between `0` and `255`. You can change whether this setting should persist to EEPROM.
 
 Values between `180` and `220` tend to work best.
 

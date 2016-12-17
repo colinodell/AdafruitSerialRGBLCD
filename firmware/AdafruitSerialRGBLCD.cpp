@@ -1,4 +1,4 @@
-#include "adafruit-serial-rgb-lcd.h"
+#include "AdafruitSerialRGBLCD.h"
 
 void SerialRGBLCD::begin()
 {
@@ -139,7 +139,7 @@ void SerialRGBLCD::setCustomCharacter(uint8_t bank, uint8_t character, uint8_t d
   write(0xC1);
   write(bank);
   write(character);
-    
+
   for (int i = 0; i < 8; i++) {
     write(data[i]);
   }
@@ -167,4 +167,3 @@ void SerialRGBLCD::write(String text)
     write(text.charAt(i));
   }
 }
-
