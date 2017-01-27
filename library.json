@@ -1,6 +1,6 @@
 {
   "name": "AdafruitSerialRGBLCD",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Firmware library for Adafruit's USB + Serial Backpack Kit with 16x2 RGB LCD",
   "keywords": "Adafruit, LCD, RGB, backpack, serial, USB",
   "license": "MIT",
