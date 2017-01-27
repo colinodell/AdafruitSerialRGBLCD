@@ -24,7 +24,7 @@ This documentation is adapted from https://learn.adafruit.com/usb-plus-serial-ba
 ### Initialization
 
 ```
-AdafruitSerialRGBLCD lcd;
+SerialRGBLCD lcd;
 
 void setup()
 {
